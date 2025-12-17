@@ -5,7 +5,7 @@
     <td>{{ $category->slug }}</td>
          <td>
                                     @if($category->image)
-                                    <img src="{{ asset('storage/categories/' . $category->image) }}"
+                                    <img src="{{ asset('uploads/categories/' . $category->image) }}"
                                          alt="{{ $category->name }}"
                                          width="80"
                                          height="80"
@@ -16,13 +16,6 @@
                                     <span class="text-muted">No image</span>
                                     @endif
                                 </td>
-    <td>
-        @if($category->language)
-            <span class="badge badge-info text-dark">{{ $category->language->name }}</span>
-        @else
-            <span class="badge badge-secondary">N/A</span>
-        @endif
-    </td>
     <td>
         @if($category->status)
             <span class="badge badge-success text-dark">Active</span>
@@ -54,6 +47,9 @@
                 <i class="fas fa-trash"></i>
             </button>
         </form>
+         <a href="{{ route('category.detail', ['slug' => $category->slug]) }}" class="btn btn-sm btn-primary" target="blank" title="view">
+            <i class="fas fa-eye"></i>
+        </a>
     </td>
 </tr>
 @endforeach

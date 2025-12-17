@@ -66,7 +66,6 @@
                                     <th>Name</th>
                                     <th>Slug</th>
                                     <th>image</th>
-                                    <th>Language</th>
                                     <th>Status</th>
                                     <th>Created By</th>
                                     <th>Last Updated</th>
