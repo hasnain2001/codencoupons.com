@@ -141,14 +141,17 @@
             </a>
 
             <!-- Delete -->
-            <button type="button"
+            <form action="{{ route('admin.store.destroy', $store->id) }}" method="POST" class="d-inline">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
                 onclick="return confirm('Are you sure you want to delete this store?')"
                 class="btn btn-outline-danger rounded-end delete-store-btn"
-                data-id="{{ $store->id }}"
-                data-bs-toggle="tooltip"
                 title="Delete Store">
                 <i class="mdi mdi-trash-can-outline"></i>
             </button>
+            </form>
+
         </div>
     </td>
 </tr>

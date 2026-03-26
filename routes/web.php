@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/auth.php';
+
 require __DIR__.'/admin.php';
 require __DIR__.'/employee.php';
 use App\Http\Controllers\ProfileController;
@@ -10,7 +10,12 @@ use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ContactController;
 use App\Http\Middleware\Localization;
 use Illuminate\Support\Facades\Route;
-
+        Route::controller(SitemapController::class)->group(function () {
+            Route::get('/sitemap.xml', function () {
+                    return response()->file(public_path('sitemap.xml'));
+                })->name('sitemap.xml');
+            Route::get('/generate-sitemap', 'generate')->name('generate-sitemap');
+        });
     Route::middleware('auth')->group(function () {
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -56,7 +61,6 @@ use Illuminate\Support\Facades\Route;
             Route::get('/Search/Store', 'search')->name('search');
             Route::get('/Search/Stores', 'searchResults')->name('search_results');
      });
-        Route::controller(SitemapController::class)->group(function () {
-            Route::get('/sitemap.xml', 'index')->name('sitemap.xml');
-            Route::get('/generate-sitemap', 'generate')->name('generate-sitemap');
-        });
+
+        
+require __DIR__.'/auth.php';

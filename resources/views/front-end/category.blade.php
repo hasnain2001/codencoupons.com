@@ -104,7 +104,7 @@
 
                                 <meta itemprop="url" content="{{ route('category.detail', ['slug' => Str::slug($category->slug)]) }}">
 
-                                <a href="{{ route('category.detail', ['slug' => $category->slug]) }}"
+                                <a href="{{ route('category.detail', ['slug' => Str::slug($category->slug)]) }}"
                                    class="view-more-btn"
                                    aria-label="Explore {{ $category->name }} category"
                                    itemprop="url">

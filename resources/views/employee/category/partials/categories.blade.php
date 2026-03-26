@@ -5,7 +5,7 @@
     <td>{{ $category->slug }}</td>
          <td>
                                     @if($category->image)
-                                    <img src="{{ asset('storage/categories/' . $category->image) }}"
+                                    <img src="{{ asset('uploads/categories/' . $category->image) }}"
                                          class="img-thumbnail"
                                          style="width: 80px; height: 80px; object-fit: cover;"
                                          alt="{{ $category->name }}"
@@ -13,6 +13,7 @@
                                          height="80"
                                          loading="lazy"
                                          title="{{ $category->name }}"
+                                         onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'"
                                          >
                                     @else
                                       <img src="{{ asset('assets/img/no-image-found.png') }}"

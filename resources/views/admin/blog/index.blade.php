@@ -237,6 +237,12 @@
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
+                                          <a href="{{ route('blog.detail', $blog->slug) }}"
+                                           class="btn btn-outline-info btn-sm rounded-start-3 px-3"
+                                           data-bs-toggle="tooltip"
+                                           title="View Blog">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>

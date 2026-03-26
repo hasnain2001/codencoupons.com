@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'heading-1' => 'Willkommen bei streamcoupon: Ihr Shopping-Guru',
+    'heading-1' => 'Willkommen bei codencoupons: Ihr Shopping-Guru',
 
-    'heading-2' => 'Genug davon, den vollen Preis zu zahlen? Wir verstehen Sie! streamcoupon ist Ihr vertrauenswürdiger Begleiter in der Welt der Rabatte, Angebote, Gutscheincodes, Bundle-Angebote und wertvollen Spartipps. Wir sind mehr als nur eine Website – wir helfen Ihnen, ein kluger und informierter Käufer zu sein, der seine Einkaufserlebnisse erfüllender und budgetfreundlicher gestaltet.',
+    'heading-2' => 'Genug davon, den vollen Preis zu zahlen? Wir verstehen Sie! codencoupons ist Ihr vertrauenswürdiger Begleiter in der Welt der Rabatte, Angebote, Gutscheincodes, Bundle-Angebote und wertvollen Spartipps. Wir sind mehr als nur eine Website – wir helfen Ihnen, ein kluger und informierter Käufer zu sein, der seine Einkaufserlebnisse erfüllender und budgetfreundlicher gestaltet.',
 
     'heading-3' => 'Unsere Vision: Intelligenteres Einkaufen ermöglichen',
 
     'heading-4' => 'Unsere Mission ist klar: Wir bieten eine zentrale Anlaufstelle, wo Käufer eine Vielzahl an Gutscheinen finden, die ihren individuellen Bedürfnissen und Vorlieben entsprechen. Wir glauben, dass Geld sparen mühelos, spannend und lohnend sein sollte. Durch die Verbindung von Verbrauchern mit exklusiven Angeboten und Partnerschaften mit Top-Händlern wollen wir das Online-Shopping neu definieren.',
 
-    'heading-5' => 'Entfalten Sie Ihr Sparpotenzial mit streamcoupon',
+    'heading-5' => 'Entfalten Sie Ihr Sparpotenzial mit codencoupons',
 
     'heading-6' => '',
 
@@ -19,7 +19,7 @@ return [
 
     'heading-9' => '2. Angebote und Aktionen',
 
-    'heading-10' => 'Entdecken Sie die neuesten und besten Angebote auf streamcoupon. Sparen Sie groß bei allem, was Sie brauchen und lieben.',
+    'heading-10' => 'Entdecken Sie die neuesten und besten Angebote auf codencoupons. Sparen Sie groß bei allem, was Sie brauchen und lieben.',
 
     'heading-11' => '3. Bundle-Angebote',
 
@@ -31,7 +31,7 @@ return [
 
     'heading-15' => '',
 
-    'heading-16' => 'Warum streamcoupon zu Ihrem Shopping-Partner machen?',
+    'heading-16' => 'Warum codencoupons zu Ihrem Shopping-Partner machen?',
 
     'heading-17' => '',
 

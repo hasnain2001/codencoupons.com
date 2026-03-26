@@ -1,20 +1,13 @@
     :root {
-        --primary: #1E8A88;
-        --primary-light: #2CA6A4;
-        --primary-lighter: #4FC1BF;
-        --primary-dark: #176E6C;
-        --secondary: #6AAD3B;
-        --secondary-light: #7BC043;
-        --secondary-dark: #5B9432;
         --accent-navy: #1F2D3D;
         --accent-navy-light: #2A3B4F;
         --accent-navy-dark: #141E2B;
-        
+
         /* Gradients */
         --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
         --gradient-secondary: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-light) 100%);
         --gradient-accent: linear-gradient(135deg, var(--accent-navy-dark) 0%, var(--accent-navy-light) 100%);
-        
+
         /* Shadows */
         --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.08);
         --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);

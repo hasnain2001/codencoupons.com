@@ -25,8 +25,6 @@ class SitemapController extends Controller
 
         // Define available locales
         $locales = Language::pluck('code', 'id')->toArray();
-
-        // Static pages (add for all locales)
         $staticRoutes = [
             'blog' => 1.0,
             'stores' => 1.0,
@@ -77,6 +75,6 @@ class SitemapController extends Controller
         // Save the sitemap
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
-        return redirect()->back()->with('success', 'Sitemap created successfully.');
+        return redirect()->route('sitemap.xml')->with('success', 'Sitemap created successfully.');
     }
 }

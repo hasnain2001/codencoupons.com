@@ -5,7 +5,7 @@
     <td>{{ $category->slug }}</td>
          <td>
                                     @if($category->image)
-                                    <img src="{{ asset('uploads/categories/' . $category->image) }}"
+                                    <img src="{{ asset('uploads/categories/' . $category->image)}}"
                                          alt="{{ $category->name }}"
                                          width="80"
                                          height="80"

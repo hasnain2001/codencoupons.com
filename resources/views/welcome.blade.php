@@ -1,6 +1,6 @@
 @extends('layouts.master')
-@section('title', 'codencoupons.com - Verified Promo Codes, Exclusive Discounts & Best Deals ' . date('Y'))
-@section('description', 'Save money with codencoupons.com. Discover verified coupon codes, exclusive discount deals, and top store offers updated daily to help you shop smarter.')
+@section('title', 'Codencoupons.com - Verified Promo Codes, Exclusive Discounts & Best Deals ' . date('Y'))
+@section('description', 'Save money with Codencoupons.com. Discover verified coupon codes, exclusive discount deals, and top store offers updated daily to help you shop smarter.')
 @section('keywords', 'coupon codes, promo codes, discount coupons, deals, offers, voucher codes')
 @section('author', 'john doe')
 @push('styles')
@@ -24,7 +24,8 @@
                         <img src="{{ $slider->image ? asset('uploads/slider/' . $slider->image) : asset('front/assets/images/no-image-found.jpg') }}"
                             class="d-block w-100"
                             alt="{{ $slider->title }}"
-                            loading="lazy">
+                            loading="lazy"
+                             onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
                         <div class="slide-overlay">
                             <span class="fw-bold mb-2">{{ $slider->title }}</span>
                             <p class="mb-0">{{ $slider->description }}</p>
@@ -110,7 +111,7 @@
 
                     <!-- Store image -->
                     <div class="store-logo text-center mb-3">
-                        <a href="{{ route('store.detail', ['slug' => $coupon->stores->slug]) }}">
+                        <a href="{{ route('store.detail', ['slug' => Str::slug($coupon->store->slug)]) }}">
                             <img src="{{ $coupon->stores->image ? asset('uploads/stores/' . $coupon->stores->image) : asset('front/assets/images/no-image-found.jpg') }}"
                                 alt="{{ $coupon->stores->name }}"
                                 class="img-fluid store-img"
@@ -234,7 +235,7 @@
 
                     <!-- Store image -->
                     <div class="store-logo text-center mb-3">
-                        <a href="{{ route('store.detail', ['slug' => $coupon->stores->slug]) }}">
+                        <a href="{{ route('store.detail', ['slug' => Str::slug($coupon->store->slug)]) }}">
                             <img src="{{ $coupon->stores->image ? asset('uploads/stores/' . $coupon->stores->image) : asset('front/assets/images/no-image-found.jpg') }}"
                                 alt="{{ $coupon->stores->name }}"
                                 class="img-fluid store-img"
@@ -312,7 +313,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card blog-card h-100 border-0 shadow-sm overflow-hidden transition-all hover-shadow">
                         <div class="card-img-top position-relative overflow-hidden" style="height: 220px;">
-                        <a href="{{ route('blog.detail', ['slug' => $blog->slug]) }}">
+                        <a href="{{ route('blog.detail', ['slug' =>Str::slug ($blog->slug)]) }}">
                                 <img src="{{ $blog->image ? asset('uploads/blogs/' . $blog->image) : asset('front/assets/images/no-image-found.jpg') }}"
                                     alt="{{ $blog->name }}"
                                     class="img-fluid w-100 h-100 object-fit-contain transition-scale"
@@ -338,7 +339,7 @@
 
 
                             <div class="d-flex align-items-center justify-content-between mt-auto">
-                                <a href="{{ route('blog.detail', ['slug' => $blog->slug]) }}" class="btn btn-link-golden ">
+                                <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" class="btn btn-link-golden ">
                                 @lang('welcome.Read More')<i class="fas fa-arrow-right ms-2"></i>
                                 </a>
                                 <div class="d-flex">

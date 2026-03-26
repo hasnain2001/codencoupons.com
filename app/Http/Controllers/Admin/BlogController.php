@@ -61,7 +61,7 @@ class BlogController extends Controller
         $blog->language_id    = $request->language_id ?? 1;
         $blog->store_id       = $request->store_id;
         $blog->name           = $request->name;
-        $blog->slug           = Str::slug($request->slug);
+        $blog->slug           = $request->slug;
         $blog->title          = $request->title;
         $blog->content        = $request->content;
         $blog->meta_keyword   = $request->meta_keyword;
@@ -79,9 +79,7 @@ class BlogController extends Controller
             if (!file_exists($uploadPath)) {
                 mkdir($uploadPath, 0755, true);
             }
-
             $image->move($uploadPath, $imageName);
-
             $blog->image = $imageName;
             $blog->save();
         }
@@ -89,11 +87,20 @@ class BlogController extends Controller
         return redirect()->route('admin.blog.index')
             ->with('success', 'Blog created successfully.');
     }
+    /* ============================
+        SHOW
+    ============================ */
+    public function show(Blog $blog)
+    {
+        return view('admin.blog.show', [
+            'blog' => $blog,
+        ]);
+    }
 
     /* ============================
         EDIT
     ============================ */
-    public function edit(Blog $blog)
+   public function edit(Blog $blog)
     {
         return view('admin.blog.edit', [
             'blog'       => $blog,
@@ -148,7 +155,7 @@ class BlogController extends Controller
         $blog->language_id      = $request->language_id ?? $blog->language_id;
         $blog->store_id         = $request->store_id;
         $blog->name             = $request->name;
-        $blog->slug             = Str::slug($request->slug);
+        $blog->slug             = $request->slug;
         $blog->title            = $request->title;
         $blog->content          = $request->content;
         $blog->meta_keyword     = $request->meta_keyword;

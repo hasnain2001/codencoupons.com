@@ -50,7 +50,7 @@
             <!-- Featured Image -->
             <div class="text-center mb-4">
                 <img class="img-fluid rounded shadow"
-                     src="{{ asset('storage/blogs/' . $blog->image) }}"
+                     src="{{ asset('uploads/blogs/' . $blog->image) }}"
                      style="max-height: 400px; width: auto; object-fit: cover;"
                      alt="{{ $blog->name }}">
             </div>

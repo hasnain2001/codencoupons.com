@@ -83,7 +83,6 @@
                                 <th>#</th>
                                 <th>Network Title</th>
                                 <th>Status</th>
-                                <th>Audit Info</th>
                                 <th>created /updated</th>
                                 <th class="text-center">Actions</th>
                             </tr>
@@ -105,18 +104,6 @@
                                             <i class="fas fa-times-circle me-1"></i> Inactive
                                         </span>
                                     @endif
-                                </td>
-                                <td>
-                                    <div class="d-flex flex-column small">
-                                        <span class="text-muted">
-                                            <i class="fas fa-user-plus me-1"></i>
-                                            {{ $network->user->name ?? 'N/A'}}
-                                        </span>
-                                        <span class="text-muted">
-                                            <i class="fas fa-user-edit me-1"></i>
-                                            {{ $network->updatedby->name ?? 'N/A'}}
-                                        </span>
-                                    </div>
                                 </td>
                               <td>
                                         <small>Created: {{ $network->created_at->format('Y-m-d H:i') }}</small><br>

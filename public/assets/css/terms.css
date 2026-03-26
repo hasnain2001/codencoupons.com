@@ -1,20 +1,4 @@
     :root {
-        /* Enhanced Color Palette with Better Contrast */
-        --white: #ffffff;
-        --black: #000000;
-
-        /* Brand Primary (Teal) - Enhanced for better contrast */
-        --primary: #1E8A88;
-        --primary-light: #2CA6A4;
-        --primary-lighter: #4FC1BF;
-        --primary-dark: #176E6C;
-
-        /* Brand Secondary (Green) - Enhanced */
-        --secondary: #6AAD3B;
-        --secondary-light: #7BC043;
-        --secondary-lighter: #9EDB6B;
-        --secondary-dark: #5B9432;
-
         /* Accent Colors */
         --accent-navy: #1F2D3D;
         --accent-navy-light: #2A3B4F;
@@ -485,7 +469,7 @@
             box-shadow: none !important;
             border: 1px solid #ddd !important;
         }
-        
+
         .section-content li:before {
             color: var(--text-primary) !important;
         }

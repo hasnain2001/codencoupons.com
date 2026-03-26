@@ -664,14 +664,19 @@
                                             onclick="showUserDetails({{ json_encode($user) }})">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button"
+
+                                    <form action="{{ route('admin.user.destroy', $user->id) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                    onclick="return confirm('Are you sure to delete this user?')"
                                             class="btn-action delete delete-user-btn"
-                                            data-bs-toggle="tooltip"
                                             title="Delete User"
-                                            data-user-id="{{ $user->id }}"
-                                            data-user-name="{{ $user->name }}">
+                                            >
                                         <i class="fas fa-trash"></i>
                                     </button>
+                                </form>
+
                                 </div>
                             </td>
                         </tr>

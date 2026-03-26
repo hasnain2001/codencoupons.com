@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                 @endif
-<form action="{{ route('employee.blog.update', ['Blogs' => $blog->id]) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('employee.blog.update', ['blog' => $blog->id]) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -155,7 +155,7 @@
                                         @if($blog->image)
                                             <div class="mt-2">
                                                 <input type="hidden" name="previous_image" value="{{ $blog->image }}">
-                                                <img src="{{ asset('uploads/' . $blog->image) }}" alt="{{ $blog->name }}" class="img-thumbnail" style="max-width: 200px;">
+                                                <img src="{{ asset('uploads/blogs/' . $blog->image) }}" alt="{{ $blog->name }}" class="img-thumbnail" style="max-width: 200px;">
                                                 <div class="form-check mt-2">
                                                     <input class="form-check-input" type="checkbox" name="remove_image" id="remove_image" value="1">
                                                     <label class="form-check-label text-danger" for="remove_image">

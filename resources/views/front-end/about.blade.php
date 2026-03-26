@@ -144,25 +144,17 @@
             </div>
         </section>
 
-        <!-- Join Community -->
-        <section class="about-section">
-            <h2>@lang('about.heading-18')</h2>
-            <p>@lang('about.heading-19')</p>
 
-            <h2>@lang('about.heading-20')</h2>
-            <p>@lang('about.heading-21')</p>
-            <p>@lang('about.heading-22')</p>
-        </section>
 
         <!-- CTA Section -->
         <div class="cta-section">
             <h3>Ready to Start Saving?</h3>
             <p>Join thousands of smart shoppers who trust codencoupons for the best deals and discounts</p>
             <div class="cta-buttons">
-                <a href="{{ route('stores') }}" class="cta-btn primary">
+                <a href="{{ route('stores',['lang' => app()->getLocale()]) }}" class="cta-btn primary">
                     <i class="fas fa-store me-2"></i>Explore Stores
                 </a>
-                <a href="{{ route('coupons') }}" class="cta-btn secondary">
+                <a href="{{ route('coupons',['lang' => app()->getLocale()]) }}" class="cta-btn secondary">
                     <i class="fas fa-tag me-2"></i>View All Coupons
                 </a>
             </div>

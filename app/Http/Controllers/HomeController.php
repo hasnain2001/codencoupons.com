@@ -210,11 +210,11 @@ class HomeController extends Controller
 
      public function category_detail( $slug, Request $request)
     {
-      
+
         $slug = Str::slug($slug);
         $title = ucwords(str_replace('-', ' ', $slug));
         $category = Category::where('slug', $title)->first();
-     
+
         $relatedblogs = Blog::where('category_id', $category->id)
                  ->where('status',1)
                 ->orderBy('created_at', 'desc')

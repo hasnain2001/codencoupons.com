@@ -91,7 +91,7 @@
         stats.forEach(stat => {
             const currentText = stat.textContent;
             const target = parseInt(currentText.replace('+', ''));
-            
+
             if (isNaN(target)) return;
 
             let current = 0;
@@ -149,7 +149,7 @@
             card.addEventListener('mouseenter', function() {
                 this.style.zIndex = '10';
             });
-            
+
             card.addEventListener('mouseleave', function() {
                 this.style.zIndex = '1';
             });

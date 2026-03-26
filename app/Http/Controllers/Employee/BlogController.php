@@ -61,7 +61,7 @@ class BlogController extends Controller
         $blog->language_id    = $request->language_id ?? 1;
         $blog->store_id       = $request->store_id;
         $blog->name           = $request->name;
-        $blog->slug           = Str::slug($request->slug);
+        $blog->slug           = $request->slug;
         $blog->title          = $request->title;
         $blog->content        = $request->content;
         $blog->meta_keyword   = $request->meta_keyword;
@@ -89,7 +89,15 @@ class BlogController extends Controller
         return redirect()->route('employee.blog.index')
             ->with('success', 'Blog created successfully.');
     }
-
+    /* ============================
+        SHOW
+    ============================ */
+    public function show(Blog $blog)
+    {
+        return view('employee.blog.show', [
+            'blog' => $blog,
+        ]);
+    }
     /* ============================
         EDIT
     ============================ */
@@ -148,7 +156,7 @@ class BlogController extends Controller
         $blog->language_id      = $request->language_id ?? $blog->language_id;
         $blog->store_id         = $request->store_id;
         $blog->name             = $request->name;
-        $blog->slug             = Str::slug($request->slug);
+        $blog->slug             = $request->slug;
         $blog->title            = $request->title;
         $blog->content          = $request->content;
         $blog->meta_keyword     = $request->meta_keyword;
